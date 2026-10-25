@@ -2,31 +2,41 @@ package ru.edu.pr01;
 
 public class OrderCalculator {
 
-    // TODO 1: Проверка корректности данных (количество, цена, скидка)
     public static boolean isValid(int quantity, double unitPrice, double discountPercent) {
-        // Количество должно быть больше 0 и не больше 10 000
-        // Цена должна быть больше 0 и не больше 5 000 000
-        // Скидка должна быть от 0 до 30
-        return false; // Пока возвращаем false, потом исправим
+        // Проверяем, что количество от 1 до 10000
+        if (quantity <= 0 || quantity > 10000) {
+            return false;
+        }
+        // Проверяем, что цена положительная и не больше 5 млн
+        if (unitPrice <= 0 || unitPrice > 5000000) {
+            return false;
+        }
+        // Проверяем, что скидка от 0 до 30
+        if (discountPercent < 0 || discountPercent > 30) {
+            return false;
+        }
+        // Если все проверки пройдены — данные верны
+        return true;
     }
 
-    // TODO 2: Вычислить базовую сумму (количество * цена)
     public static double calculateBase(int quantity, double unitPrice) {
-        return 0.0; // Пока 0, потом исправим
+        return quantity * unitPrice;
     }
 
-    // TODO 3: Применить скидку (база - (база * скидка / 100))
     public static double applyDiscount(double base, double discountPercent) {
-        return base; // Пока без изменений, потом исправим
+        double discountAmount = base * (discountPercent / 100);
+        return base - discountAmount;
     }
 
-    // TODO 4: Вычислить НДС (сумма_со_скидкой * ставка_НДС / 100)
     public static double calculateVat(double discounted, double vatPercent) {
-        return 0.0; // Пока 0, потом исправим
+        return discounted * (vatPercent / 100);
     }
 
-    // TODO 5: Итоговая сумма (сумма_со_скидкой + НДС)
     public static double calculateTotal(int quantity, double unitPrice, double discountPercent, double vatPercent) {
-        return 0.0; // Пока 0, потом исправим
+        double base = calculateBase(quantity, unitPrice);
+        double discounted = applyDiscount(base, discountPercent);
+        double vat = calculateVat(discounted, vatPercent);
+
+        return discounted + vat;
     }
 }
