@@ -1,4 +1,5 @@
-package ru.edu.pr01.p8;
+package ru.edu.pr08;
+
 import java.time.LocalDate;
 
 public class BusinessTrip {

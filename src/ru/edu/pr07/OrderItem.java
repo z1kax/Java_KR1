@@ -1,4 +1,5 @@
-package ru.edu.pr01.p7;
+package ru.edu.pr07;
+
 public class OrderItem {
     private final Product product; private int quantity;
     public OrderItem(Product product, int quantity) {

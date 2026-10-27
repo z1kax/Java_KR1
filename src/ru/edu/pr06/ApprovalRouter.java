@@ -1,4 +1,4 @@
-package ru.edu.pr01.p6;
+package ru.edu.pr06;
 
 public class ApprovalRouter {
     public static final long FINANCE_LIMIT = 500_000;

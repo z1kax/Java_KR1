@@ -1,2 +1,2 @@
-package ru.edu.pr01.p6;
+package ru.edu.pr06;
 public enum RiskLevel { LOW, MEDIUM, HIGH }

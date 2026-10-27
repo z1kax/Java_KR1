@@ -1,4 +1,4 @@
-package ru.edu.pr01.p5;
+package ru.edu.pr05;
 
 public class TimesheetAnalyzer {
     public static String analyze(String line) {

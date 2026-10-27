@@ -1,4 +1,4 @@
-package ru.edu.pr01;
+package ru.edu.pr03;
 
 public class OrderCalculator {
 

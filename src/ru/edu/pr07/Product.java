@@ -1,4 +1,4 @@
-package ru.edu.pr01.p7;
+package ru.edu.pr07;
 public class Product {
     private final String id; private final String name; private final double price;
     public Product(String id, String name, double price) {

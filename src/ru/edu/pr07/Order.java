@@ -1,4 +1,5 @@
-package ru.edu.pr01.p7;
+package ru.edu.pr07;
+
 import java.util.ArrayList; import java.util.Collections; import java.util.List;
 
 public class Order {
